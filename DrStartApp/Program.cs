@@ -4,9 +4,9 @@ using System.IO;
 
 namespace DrStartApp
 {
-    class Program
+    static class Program
     {
-        static private void KillProcess(string processName)
+        private static void KillProcess(string processName)
         {
             try
             {
@@ -29,7 +29,7 @@ namespace DrStartApp
             var backEndSitePath = di.FullName + @"\source\Release\DR_Application.exe";
 
             ProcessStartInfo startInfo = new ProcessStartInfo(backEndSitePath);
-            startInfo.WindowStyle = ProcessWindowStyle.Minimized;
+            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
 
             KillProcess("DR_Application");
             Process.Start(startInfo);
