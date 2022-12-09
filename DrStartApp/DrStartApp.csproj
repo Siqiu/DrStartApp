@@ -3,7 +3,7 @@
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
         <TargetFramework>net40</TargetFramework>
-        <ApplicationIcon>a81zp-h67wq-003.ico</ApplicationIcon>
+<!--        <ApplicationIcon>a81zp-h67wq-003.ico</ApplicationIcon>-->
     </PropertyGroup>
 
 </Project>
