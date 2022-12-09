@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrStartApp", "DrStartApp\DrStartApp.csproj", "{A9CB19BF-B4BB-4E6D-AC1D-08E1C789D585}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "daemon", "daemon\daemon.csproj", "{0300D939-45FC-4497-8785-FE6509F11397}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{A9CB19BF-B4BB-4E6D-AC1D-08E1C789D585}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9CB19BF-B4BB-4E6D-AC1D-08E1C789D585}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9CB19BF-B4BB-4E6D-AC1D-08E1C789D585}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0300D939-45FC-4497-8785-FE6509F11397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0300D939-45FC-4497-8785-FE6509F11397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0300D939-45FC-4497-8785-FE6509F11397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0300D939-45FC-4497-8785-FE6509F11397}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

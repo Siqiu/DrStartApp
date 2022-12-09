@@ -22,43 +22,31 @@ namespace DrStartApp
             }
         }
 
-        private static bool findTask(string processName)
-        {
-            foreach (Process process in Process.GetProcessesByName(processName))
-            {
-                // exist
-                return false;
-            }
-            return true;
-        }
-        
         static void Main(string[] args)
         {
-            string applicationName = "DR_Application";
+            string backEndName = "DR_Application";
+            string daemonName = "daemon";
+            
             DirectoryInfo di = new DirectoryInfo($@"{System.Environment.CurrentDirectory}");
             
             var webSitePath = di.FullName + @"\source\dist\index.html";
             var backEndSitePath = di.FullName + @"\source\Release\DR_Application.exe";
+            var daemonSitePath = di.FullName + @"\source\daemon.exe";
 
-            ProcessStartInfo startInfo = new ProcessStartInfo(backEndSitePath);
-            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            ProcessStartInfo backEnd = new ProcessStartInfo(backEndSitePath);
+            backEnd.WindowStyle = ProcessWindowStyle.Hidden;
+            
+            ProcessStartInfo daemon = new ProcessStartInfo(daemonSitePath);
+            daemon.WindowStyle = ProcessWindowStyle.Hidden;
 
-            KillProcess(applicationName);
-            Process.Start(startInfo);
+            KillProcess(backEndName);
+            KillProcess(daemonName);
+            
+            Process.Start(backEnd);
 
             Process.Start(webSitePath);
-
-            while (true)
-            {
-                // 查找执行程序在task list中
-                if (findTask(applicationName))
-                {
-                    // 如果不在则重新启动后台
-                    Process.Start(startInfo);
-                    Console.WriteLine(DateTime.Now.ToString() + "Start Backend");
-                }
-                Thread.Sleep(1000);
-            }
+            
+            Process.Start(daemon);
         }
     }
 }
