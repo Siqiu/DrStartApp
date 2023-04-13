@@ -13,6 +13,8 @@ namespace DrStartApp
             {
                 foreach (Process process in Process.GetProcessesByName(processName))
                 {
+                    // 不显示命令窗口
+                    process.StartInfo.CreateNoWindow = true;
                     process.Kill();
                 }
             }
@@ -24,13 +26,13 @@ namespace DrStartApp
 
         static void Main(string[] args)
         {
-            string backEndName = "DR_Application";
+            string backEndName = "BmsApplication";
             string daemonName = "daemon";
             
             DirectoryInfo di = new DirectoryInfo($@"{System.Environment.CurrentDirectory}");
             
             var webSitePath = di.FullName + @"\source\dist\index.html";
-            var backEndSitePath = di.FullName + @"\source\Release\DR_Application.exe";
+            var backEndSitePath = di.FullName + @"\source\Release\BmsApplication.exe";
             var daemonSitePath = di.FullName + @"\source\daemon.exe";
 
             ProcessStartInfo backEnd = new ProcessStartInfo(backEndSitePath);

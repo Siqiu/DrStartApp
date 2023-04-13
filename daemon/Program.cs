@@ -10,18 +10,16 @@ namespace daemon
         private static bool findTask(string processName)
         {
             foreach (Process process in Process.GetProcessesByName(processName))
-            {
                 // exist
                 return false;
-            }
             return true;
         }
-        
-        static void Main(string[] args)
+
+        private static void Main(string[] args)
         {
-            string applicationName = "DR_Application";
+            string applicationName = "BmsApplication";
             DirectoryInfo di = new DirectoryInfo($@"{System.Environment.CurrentDirectory}");
-            var backEndSitePath = di.FullName + @"\source\Release\DR_Application.exe";
+            var backEndSitePath = di.FullName + @"\source\Release\BmsApplication.exe";
 
             ProcessStartInfo startInfo = new ProcessStartInfo(backEndSitePath);
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;
@@ -36,6 +34,7 @@ namespace daemon
                     Process.Start(startInfo);
                     Console.WriteLine(DateTime.Now.ToString() + "Start Backend");
                 }
+
                 Thread.Sleep(1000);
             }
         }

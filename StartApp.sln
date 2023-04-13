@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrStartApp", "DrStartApp\DrStartApp.csproj", "{A9CB19BF-B4BB-4E6D-AC1D-08E1C789D585}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartApp", "StartApp\StartApp.csproj", "{A9CB19BF-B4BB-4E6D-AC1D-08E1C789D585}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "daemon", "daemon\daemon.csproj", "{0300D939-45FC-4497-8785-FE6509F11397}"
 EndProject
