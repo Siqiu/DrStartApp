@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading;
 
-namespace DrStartApp
+namespace StartApp
 {
     static class Program
     {
@@ -24,8 +24,9 @@ namespace DrStartApp
             }
         }
 
-        static void Main(string[] args)
+        static void normal(int port)
         {
+            string backEndNameOld = "DR_Application";
             string backEndName = "BmsApplication";
             string daemonName = "daemon";
             
@@ -37,10 +38,12 @@ namespace DrStartApp
 
             ProcessStartInfo backEnd = new ProcessStartInfo(backEndSitePath);
             backEnd.WindowStyle = ProcessWindowStyle.Hidden;
+            backEnd.Arguments = port.ToString() + " " + webSitePath;
             
             ProcessStartInfo daemon = new ProcessStartInfo(daemonSitePath);
             daemon.WindowStyle = ProcessWindowStyle.Hidden;
 
+            KillProcess(backEndNameOld);
             KillProcess(backEndName);
             KillProcess(daemonName);
             
@@ -49,6 +52,11 @@ namespace DrStartApp
             Process.Start(webSitePath);
             
             Process.Start(daemon);
+        }
+
+        static void Main(string[] args)
+        {
+            normal(8888);
         }
     }
 }

@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartApp", "StartApp\StartA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "daemon", "daemon\daemon.csproj", "{0300D939-45FC-4497-8785-FE6509F11397}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryApp", "FactoryApp\FactoryApp.csproj", "{6835FC6B-4487-4C07-ACA6-45357B1E43AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{0300D939-45FC-4497-8785-FE6509F11397}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0300D939-45FC-4497-8785-FE6509F11397}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0300D939-45FC-4497-8785-FE6509F11397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6835FC6B-4487-4C07-ACA6-45357B1E43AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6835FC6B-4487-4C07-ACA6-45357B1E43AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6835FC6B-4487-4C07-ACA6-45357B1E43AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6835FC6B-4487-4C07-ACA6-45357B1E43AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
