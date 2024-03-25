@@ -56,7 +56,24 @@ namespace StartApp
 
         static void Main(string[] args)
         {
-            normal(8888);
+            const string password = "666666";
+
+            Console.WriteLine("请输入密码：(Please enter the password:)");
+            Console.WriteLine("");
+            string inputPassword = Console.ReadLine();
+
+            if (inputPassword == password)
+            {
+                Console.WriteLine("密码正确，正在启动程序...(Password correct, starting the program...)");
+                normal(8888);
+            }
+            else
+            { 
+                Console.WriteLine("密码错误，程序无法启动。(Incorrect password, program cannot be started.)");
+            }
+
+            Console.WriteLine("按任意键退出... (Press any key to exit...)");
+            Console.ReadKey();
         }
     }
 }
